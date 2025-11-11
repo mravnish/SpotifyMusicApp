@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serve static files f
 // app.use(express.json());
 
 // Routes to serve HTML files
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'LogIn.html'));
     const { loginEmail, loginPassword } = req.body;
     // console.log(`Login Email: ${loginEmail}, Password: ${loginPassword}`);
@@ -99,6 +99,7 @@ app.listen(PORT, () => {
 // // app.listen(PORT, () => {
 // //     console.log(`Server is running on http://localhost:${PORT}`);
 // // });
+
 
 
 
