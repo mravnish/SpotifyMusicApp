@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'LogIn.html'));
     const { loginEmail, loginPassword } = req.body;
     // console.log(`Login Email: ${loginEmail}, Password: ${loginPassword}`);
-    res.json({ message: 'Login form submitted! Done' });
+   // res.json({ message: 'Login form submitted! Done' });
 });
 
 // API routes for form submissions
@@ -99,6 +99,7 @@ app.listen(PORT, () => {
 // // app.listen(PORT, () => {
 // //     console.log(`Server is running on http://localhost:${PORT}`);
 // // });
+
 
 
 
