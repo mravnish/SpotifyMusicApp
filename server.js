@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serve static files f
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'LogIn.html'));
     const { loginEmail, loginPassword } = req.body;
-    // console.log(`Login Email: ${loginEmail}, Password: ${loginPassword}`);
+     console.log(`Login Email: ${loginEmail}, Password: ${loginPassword}`);
     res.json({ message: 'Login form submitted! Done' });
 });
 
@@ -99,6 +99,7 @@ app.listen(PORT, () => {
 // // app.listen(PORT, () => {
 // //     console.log(`Server is running on http://localhost:${PORT}`);
 // // });
+
 
 
 
