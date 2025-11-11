@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
     const { loginEmail, loginPassword } = req.body;
     console.log(`Login Email: ${loginEmail}, Password: ${loginPassword}`);
-    res.json({ message: 'Login form submitted!' });
+    res.json({ message: 'Login form submitted!Thank You' });
 });
 
 app.post('/signup', (req, res) => {
@@ -99,6 +99,7 @@ app.listen(PORT, () => {
 // // app.listen(PORT, () => {
 // //     console.log(`Server is running on http://localhost:${PORT}`);
 // // });
+
 
 
 
