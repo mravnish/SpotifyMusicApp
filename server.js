@@ -9,24 +9,26 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Root route – Only show UI
+// Show index.html on homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'LogIn.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// API routes
+// Login API
 app.post('/login', (req, res) => {
     const { loginEmail, loginPassword } = req.body;
     console.log(`Login Email: ${loginEmail}, Password: ${loginPassword}`);
-    res.json({ message: 'Login form submitted! Thank You' });
+    res.json({ message: 'Login form submitted!' });
 });
 
+// Signup API
 app.post('/signup', (req, res) => {
     const { signupUsername, signupEmail, signupPassword } = req.body;
     console.log(`Signup Username: ${signupUsername}, Email: ${signupEmail}, Password: ${signupPassword}`);
     res.json({ message: 'Signup form submitted!' });
 });
 
+// Server start
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
@@ -140,6 +142,7 @@ app.listen(PORT, () => {
 // // app.listen(PORT, () => {
 // //     console.log(`Server is running on http://localhost:${PORT}`);
 // // });
+
 
 
 
