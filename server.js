@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Show index.html on homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Login API
@@ -142,6 +142,7 @@ app.listen(PORT, () => {
 // // app.listen(PORT, () => {
 // //     console.log(`Server is running on http://localhost:${PORT}`);
 // // });
+
 
 
 
